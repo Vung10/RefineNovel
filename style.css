@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0e0e10;
+  color: white;
+}
+
+header {
+  padding: 12px;
+  background: #18181b;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#streamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 8px;
+  padding: 8px;
+}
+
+.stream {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: black;
+}
