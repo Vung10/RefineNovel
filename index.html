@@ -1,1 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare the Best VPNs in 2026 | VPN Review Hub</title>
+    <meta name="description" content="Independent VPN comparisons and reviews. Find the best VPN for streaming, gaming, privacy, and value in 2026.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-gray: #f9fafb;
+            --border: #e5e7eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-size: 0.875rem;
+        }
+
+        select, input[type="range"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 0.375rem;
+            background: white;
+            font-size: 0.875rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        /* VPN Cards */
+        .vpn-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .vpn-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .vpn-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .vpn-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .vpn-info h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.125rem;
+        }
+
+        .score {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .badge {
+            background: var(--secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.editors-choice {
+            background: #8b5cf6;
+        }
+
+        .price-box {
+            text-align: right;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .price-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Specs Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .spec-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .spec-content h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-content p {
+            font-size: 0.875rem;
+            color: var(--text);
+        }
+
+        /* Pros/Cons */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pros, .cons {
+            background: var(--bg-gray);
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .pros h4, .cons h4 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pros h4 {
+            color: var(--success);
+        }
+
+        .cons h4 {
+            color: #ef4444;
+        }
+
+        .pros ul, .cons ul {
+            list-style: none;
+        }
+
+        .pros li, .cons li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .pros li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .cons li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-gray);
+        }
+
+        /* Category Links */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .category-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .category-card p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .vpn-header {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .price-box {
+                text-align: left;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">VPN Review Hub</a>
+            <ul class="nav-links">
+                <li><a href="#vpns">All VPNs</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Compare the Best VPNs in 2026</h1>
+        <p>Independent reviews and comparisons to help you find the perfect VPN for streaming, privacy, gaming, and value.</p>
+    </section>
+
+    <section class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>Use Case</label>
+                    <select id="useCase">
+                        <option value="all">All VPNs</option>
+                        <option value="streaming">Streaming</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="privacy">Privacy</option>
+                        <option value="budget">Budget</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Max Price/Month</label>
+                    <select id="price">
+                        <option value="all">Any Price</option>
+                        <option value="5">Under $5</option>
+                        <option value="10">Under $10</option>
+                        <option value="15">Under $15</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Streaming Support</label>
+                    <select id="streaming">
+                        <option value="all">Any</option>
+                        <option value="netflix">Netflix</option>
+                        <option value="hulu">Hulu</option>
+                        <option value="disney">Disney+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Platform</label>
+                    <select id="platform">
+                        <option value="all">All Platforms</option>
+                        <option value="windows">Windows</option>
+                        <option value="mac">macOS</option>
+                        <option value="ios">iOS</option>
+                        <option value="android">Android</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title" id="vpns">Top VPN Services 2026</h2>
+        
+        <div class="vpn-grid">
+            <!-- VPN Card 1 -->
+            <article class="vpn-card">
+                <div class="vpn-header">
+                    <div class="vpn-info">
+                        <h3>NordVPN</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">4.8/5</span>
+                        </div>
+                        <span class="badge editors-choice">Editor's Choice</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">$3.39</div>
+                        <div class="price-label">per month</div>
+                    </div>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Encryption</h4>
+                            <p>AES-256, WireGuard</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Speed Loss</h4>
+                            <p>~15% average</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Servers</h4>
+                            <p>6,000+ in 111 countries</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Devices</h4>
+                            <p>10 simultaneous</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Excellent streaming support (Netflix, Hulu, Disney+)</li>
+                            <li>Independently audited no-logs policy</li>
+                            <li>Fast WireGuard implementation</li>
+                            <li>Strong security features (kill switch, threat protection)</li>
+                            <li>User-friendly apps across all platforms</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Based in Panama (14-Eyes jurisdiction concern for some)</li>
+                            <li>Monthly plan is expensive ($12.99/mo)</li>
+                            <li>Split tunneling not available on iOS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Get NordVPN →</a>
+                    <a href="#" class="btn btn-secondary">Read Full Review</a>
+                </div>
+            </article>
+
+            <!-- VPN Card 2 -->
+            <article class="vpn-card">
+                <div class="vpn-header">
+                    <div class="vpn-info">
+                        <h3>Surfshark</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★½</span>
+                            <span class="score">4.6/5</span>
+                        </div>
+                        <span class="badge">Best Value</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">$2.19</div>
+                        <div class="price-label">per month</div>
+                    </div>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Encryption</h4>
+                            <p>AES-256, WireGuard</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Speed Loss</h4>
+                            <p>~18% average</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Servers</h4>
+                            <p>3,200+ in 100 countries</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Devices</h4>
+                            <p>Unlimited</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Unlimited simultaneous device connections</li>
+                            <li>Excellent price point for long-term plans</li>
+                            <li>Works reliably with major streaming platforms</li>
+                            <li>CleanWeb ad/tracker blocker included</li>
+                            <li>30-day money-back guarantee</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Slightly slower than top competitors</li>
+                            <li>Smaller server network than NordVPN</li>
+                            <li>Renewal prices increase significantly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Get Surfshark →</a>
+                    <a href="#" class="btn btn-secondary">Read Full Review</a>
+                </div>
+            </article>
+
+            <!-- VPN Card 3 -->
+            <article class="vpn-card">
+                <div class="vpn-header">
+                    <div class="vpn-info">
+                        <h3>ExpressVPN</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">4.7/5</span>
+                        </div>
+                        <span class="badge">Fastest</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">$6.67</div>
+                        <div class="price-label">per month</div>
+                    </div>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Encryption</h4>
+                            <p>AES-256, Lightway</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Speed Loss</h4>
+                            <p>~12% average</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Servers</h4>
+                            <p>3,000+ in 105 countries</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <svg class="spec-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <div class="spec-content">
+                            <h4>Devices</h4>
+                            <p>8 simultaneous</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Consistently fastest speeds in testing</li>
+                            <li>Proprietary Lightway protocol is extremely efficient</li>
+                            <li>Best-in-class customer support (24/7 live chat)</li>
+                            <li>Works in China and restrictive countries</li>
+                            <li>Router app available</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Most expensive option on this list</li>
+                            <li>Only 8 simultaneous connections</li>
+                            <li>No split tunneling on macOS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Get ExpressVPN →</a>
+                    <a href="#" class="btn btn-secondary">Read Full Review</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Category Links -->
+        <section id="categories">
+            <h2 class="section-title">Find the Right VPN for Your Needs</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <h3>Best for Streaming</h3>
+                    <p>VPNs that reliably unblock Netflix, Hulu, Disney+
